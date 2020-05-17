@@ -8,12 +8,12 @@
 /* eslint-env node */
 
 module.exports = function (/* ctx */) {
-    return {
+  return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
-      
+
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -32,7 +32,7 @@ module.exports = function (/* ctx */) {
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
       'roboto-font', // optional, you are not bound to it
-      'material-icons', // optional, you are not bound to it
+      'material-icons' // optional, you are not bound to it
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
@@ -80,23 +80,23 @@ module.exports = function (/* ctx */) {
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
       extendWebpack (cfg) {
-cfg.module.rules.push({
+        cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /node_modules/,
           options: {
-            formatter: require('eslint').CLIEngine.getFormatter('stylish'),
+            formatter: require('eslint').CLIEngine.getFormatter('stylish')
           }
         })
-      },
+      }
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
       https: false,
       port: 8080,
-      open: true // opens browser window automatically
+      open: false // opens browser window automatically
     },
 
     // animations: 'all', // --- includes all animations

@@ -12,10 +12,9 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Flexbox and Grid for Responsive Web
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -30,7 +29,7 @@
           header
           class="text-grey-8"
         >
-          Essential Links
+          Lesson Links
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -61,7 +60,7 @@ export default {
       leftDrawerOpen: false,
       essentialLinks: [
         {
-          title: 'Docs',
+          title: 'Lesson 1',
           caption: 'quasar.dev',
           icon: 'school',
           link: 'https://quasar.dev'
