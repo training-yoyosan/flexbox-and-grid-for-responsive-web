@@ -1,25 +1,43 @@
 <template>
-  <q-page class="text-center">
-    <div class="q-my-lg text-h5">Day 1</div>
-    <embed
-      src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://raw.githubusercontent.com/jen4web/fem-layout/master/day1.pdf"
-      width="90%"
-      height="650px"
-    />
+  <q-page class="q-ma-md">
+    <q-card>
+      <q-tabs
+        v-model="tab"
+        dense
+        class="text-grey"
+        active-color="primary"
+        indicator-color="primary"
+        align="justify"
+        narrow-indicator
+        no-caps
+      >
+        <q-tab name="day1" label="Day 1" />
+        <q-tab name="day2" label="Day 2" />
+      </q-tabs>
 
-    <div class="q-my-lg text-h5">Day 2</div>
-    <embed
-      src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://raw.githubusercontent.com/jen4web/fem-layout/master/day2.pdf"
-      width="90%"
-      height="650px"
-    />
+      <q-separator />
+
+      <q-tab-panels v-model="tab" animated>
+        <q-tab-panel name="day1">
+          <embed src="statics/day1.pdf" style="width: 100%; height: 85vh" />
+        </q-tab-panel>
+
+        <q-tab-panel name="day2">
+          <embed src="statics/day2.pdf" style="width: 100%; height: 85vh" />
+        </q-tab-panel>
+      </q-tab-panels>
+    </q-card>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+
+  data () {
+    return {
+      tab: 'day1'
+    }
+  }
 }
 </script>

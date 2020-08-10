@@ -41,7 +41,12 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
-      essentialLinks: []
+      essentialLinks: [
+        {
+          title: '1. Intro to floats',
+          link: '/1-intro-to-floats'
+        }
+      ]
     }
   }
 }
