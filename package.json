@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.9.3",
+    "normalize.css": "^8.0.1",
     "quasar": "^1.12.13"
   },
   "devDependencies": {
