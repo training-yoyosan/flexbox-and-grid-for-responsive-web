@@ -15,10 +15,20 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" content-class="bg-grey-1">
+    <q-drawer
+      v-model="leftDrawerOpen"
+      content-class="bg-grey-1"
+    >
       <q-list>
-        <q-item-label header class="text-grey-8">Lesson Links</q-item-label>
-        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+        <q-item-label
+          header
+          class="text-grey-8"
+        >Lesson Links</q-item-label>
+        <EssentialLink
+          v-for="link in essentialLinks"
+          :key="link.title"
+          v-bind="link"
+        />
       </q-list>
     </q-drawer>
 
@@ -42,6 +52,10 @@ export default {
     return {
       leftDrawerOpen: false,
       essentialLinks: [
+        {
+          title: 'Home',
+          link: '/'
+        },
         {
           title: '1. Intro to floats',
           link: '/1-intro-to-floats'

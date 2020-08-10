@@ -1,10 +1,13 @@
-
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', component: () => import('pages/Index.vue') },
+      {
+        path: '/1-intro-to-floats',
+        component: () => import('pages/1-intro-to-floats.vue')
+      }
     ]
   }
 ]
