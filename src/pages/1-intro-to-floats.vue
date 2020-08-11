@@ -1,5 +1,5 @@
 <template>
-  <q-page padding>
+  <q-page>
 
     <q-list class="rounded-borders">
       <q-expansion-item
@@ -18,7 +18,7 @@
     <div class="wrapper">
       <!-- row 1, 4 individual boxes -->
       <div class="rowf">
-        <article class="colf-1">
+        <article class="colf-1-2">
           <h3>Boston Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/boston-cream.jpg"
@@ -29,7 +29,7 @@
             <a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a>
           </p>
         </article>
-        <article class="colf-1">
+        <article class="colf-1-2">
           <h3>Coconut Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/coconut-cream.jpg"
@@ -40,7 +40,7 @@
             <a href="https://www.favfamilyrecipes.com/coconut-cream-pie-2/">Read more &gt;&gt;</a>
           </p>
         </article>
-        <article class="colf-1">
+        <article class="colf-1-2">
           <h3>Key Lime Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/keylime-pie.jpg"
@@ -54,7 +54,7 @@
             >Read more &gt;&gt;</a>
           </p>
         </article>
-        <article class="colf-1">
+        <article class="colf-1-2">
           <h3>Pumpkin Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/pumpkin-pie.jpg"
@@ -103,7 +103,7 @@
 
       <!-- row 3: narrow left column, wide right/content column -->
       <div class="rowf">
-        <article class="colf-1">
+        <article class="colf-1-4">
           <h3>Boston Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/boston-cream.jpg"
@@ -178,8 +178,6 @@ a {
   color: #2772b0;
 }
 .wrapper {
-  width: 97%;
-  max-width: 1200px;
   margin: 0 auto;
   float: none;
   background-color: #fff;
@@ -196,78 +194,71 @@ div img {
   clear: both;
 }
 
-.colf-1 {
-  float: left;
+[class*="colf-"] {
   margin-left: 4%;
   margin-right: 4%;
   margin-bottom: 4%;
-  background-color: bisque;
-  padding: 0 15px 0 15px;
+  width: 92%;
+  min-height: 1px; /* browser hack for older IE versions */
+  float: left;
+}
+
+.colf-1-2,
+.colf-1-4 {
+  background-color: #ffc;
 }
 
 .colf-2 {
-  float: left;
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-bottom: 4%;
-  background-color: cadetblue;
-  padding: 0 15px 0 15px;
+  background-color: #fcf;
 }
 
 .colf-3 {
-  float: left;
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-bottom: 4%;
-  background-color: palevioletred;
-  padding: 0 15px 0 15px;
+  background-color: #cff;
 }
 
 .colf-4 {
-  float: left;
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-bottom: 4%;
-  background-color: violet;
-  padding: 0 15px 0 15px;
+  background-color: #ccf;
 }
 
 /* grid system -- mobile first! */
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px) {
-  .colf-1 {
+  [class*="colf-"] {
+    margin-right: 0;
   }
 
+  .colf-1-2,
   .colf-2 {
+    width: 44%;
   }
 
-  .colf-3 {
-  }
-
+  .colf-1-4,
   .colf-4 {
+    width: 92%;
   }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-  .colf-1 {
-    width: 20%;
+  [class*="colf-"] {
     margin-right: 0;
+  }
+
+  .colf-1-2,
+  .colf-1-4 {
+    width: 20%;
   }
 
   .colf-2 {
-    width: 40%;
-    margin-right: 0;
+    width: 44%;
   }
 
   .colf-3 {
-    width: 60%;
-    margin-right: 0;
+    width: 68%;
   }
 
   .colf-4 {
-    width: 80%;
-    margin-right: 0;
+    width: 92%;
   }
 }
 </style>
