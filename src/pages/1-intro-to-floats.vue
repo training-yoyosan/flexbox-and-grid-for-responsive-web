@@ -1,6 +1,18 @@
 <template>
   <q-page padding>
 
+    <div class="row justify-end">
+      <q-btn
+        color="primary"
+        icon="fab fa-github"
+        label="Source code"
+        type="a"
+        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/1-intro-to-floats.vue"
+        target="_blank"
+        no-caps
+      />
+    </div>
+
     <q-list class="rounded-borders q-my-md">
       <q-expansion-item
         expand-separator
