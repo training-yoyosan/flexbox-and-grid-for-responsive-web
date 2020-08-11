@@ -59,6 +59,10 @@ export default {
         {
           title: '1. Intro to floats',
           link: '/1-intro-to-floats'
+        },
+        {
+          title: '2. Flexbox intro',
+          link: '/2-flexbox-intro'
         }
       ]
     }

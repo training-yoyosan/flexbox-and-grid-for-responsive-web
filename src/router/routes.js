@@ -7,6 +7,10 @@ const routes = [
       {
         path: '/1-intro-to-floats',
         component: () => import('pages/1-intro-to-floats.vue')
+      },
+      {
+        path: '/2-flexbox-intro',
+        component: () => import('pages/2-flexbox-intro.vue')
       }
     ]
   }
