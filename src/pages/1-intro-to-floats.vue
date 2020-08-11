@@ -17,8 +17,8 @@
 
     <div class="wrapper">
       <!-- row 1, 4 individual boxes -->
-      <div>
-        <article>
+      <div class="rowf">
+        <article class="colf-1">
           <h3>Boston Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/boston-cream.jpg"
@@ -29,7 +29,7 @@
             <a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a>
           </p>
         </article>
-        <article>
+        <article class="colf-1">
           <h3>Coconut Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/coconut-cream.jpg"
@@ -40,7 +40,7 @@
             <a href="https://www.favfamilyrecipes.com/coconut-cream-pie-2/">Read more &gt;&gt;</a>
           </p>
         </article>
-        <article>
+        <article class="colf-1">
           <h3>Key Lime Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/keylime-pie.jpg"
@@ -54,7 +54,7 @@
             >Read more &gt;&gt;</a>
           </p>
         </article>
-        <article>
+        <article class="colf-1">
           <h3>Pumpkin Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/pumpkin-pie.jpg"
@@ -70,8 +70,8 @@
         </article>
       </div>
       <!-- row 2, 2 boxes spanning 2 rows -->
-      <div>
-        <article>
+      <div class="rowf">
+        <article class="colf-2">
           <h3>Key Lime Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/keylime-pie.jpg"
@@ -85,7 +85,7 @@
             >Read more &gt;&gt;</a>
           </p>
         </article>
-        <article>
+        <article class="colf-2">
           <h3>Pumpkin Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/pumpkin-pie.jpg"
@@ -102,8 +102,8 @@
       </div>
 
       <!-- row 3: narrow left column, wide right/content column -->
-      <div>
-        <article>
+      <div class="rowf">
+        <article class="colf-1">
           <h3>Boston Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/boston-cream.jpg"
@@ -114,7 +114,7 @@
             <a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a>
           </p>
         </article>
-        <article>
+        <article class="colf-3">
           <h3>Coconut Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/coconut-cream.jpg"
@@ -127,8 +127,8 @@
         </article>
       </div>
       <!-- row 4: one column -->
-      <div>
-        <article>
+      <div class="rowf">
+        <article class="colf-4">
           <h3>Boston Cream Pie</h3>
           <img
             src="statics/images/1-intro-to-floats/boston-cream.jpg"
@@ -190,12 +190,84 @@ div img {
   max-width: 225px;
 }
 
+.rowf::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.colf-1 {
+  float: left;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  background-color: bisque;
+  padding: 0 15px 0 15px;
+}
+
+.colf-2 {
+  float: left;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  background-color: cadetblue;
+  padding: 0 15px 0 15px;
+}
+
+.colf-3 {
+  float: left;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  background-color: palevioletred;
+  padding: 0 15px 0 15px;
+}
+
+.colf-4 {
+  float: left;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  background-color: violet;
+  padding: 0 15px 0 15px;
+}
+
 /* grid system -- mobile first! */
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px) {
+  .colf-1 {
+  }
+
+  .colf-2 {
+  }
+
+  .colf-3 {
+  }
+
+  .colf-4 {
+  }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
+  .colf-1 {
+    width: 20%;
+    margin-right: 0;
+  }
+
+  .colf-2 {
+    width: 40%;
+    margin-right: 0;
+  }
+
+  .colf-3 {
+    width: 60%;
+    margin-right: 0;
+  }
+
+  .colf-4 {
+    width: 80%;
+    margin-right: 0;
+  }
 }
 </style>
