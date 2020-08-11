@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
 
-    <q-list class="rounded-borders">
+    <q-list class="rounded-borders q-my-md">
       <q-expansion-item
         expand-separator
         v-model="expanded"
