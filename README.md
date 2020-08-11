@@ -1,6 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3fde15e6-8a22-4c75-b383-9dd1f2076165/deploy-status)](https://app.netlify.com/sites/fagfrw/deploys)
+
 # Flexbox and Grid for Responsive Web (flexbox-and-grids-for-responsive-web)
 
-A Quasar Framework app
+Check out at https://fagfrw.netlify.app/.
 
 ## Install the dependencies
 ```bash
