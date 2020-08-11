@@ -4,6 +4,8 @@
 
 Check out at https://fagfrw.netlify.app/.
 
+Find the course at https://frontendmasters.com/courses/css-grids-flexbox/.
+
 ## Install the dependencies
 ```bash
 yarn
