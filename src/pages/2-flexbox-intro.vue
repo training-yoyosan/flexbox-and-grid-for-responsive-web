@@ -122,10 +122,25 @@ ul.ex {
   padding: 0;
   margin: 0;
   border: 1px dotted red;
+  display: flex;
+  /*
+  flex-direction: row;
+  flex-wrap: wrap;
+ */
+  /* or */
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 400px;
+  align-items: stretch;
 }
 li.ex {
   border: 1px solid #999;
   margin: 0.5em;
   padding: 0.5em;
+}
+li.flex2 {
+  border: 2px dotted blue;
+  order: 2;
+  flex: 2 0 25%;
 }
 </style>
