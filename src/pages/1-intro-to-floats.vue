@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page padding>
 
     <q-list class="rounded-borders">
       <q-expansion-item
@@ -195,12 +195,11 @@ div img {
 }
 
 [class*="colf-"] {
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-bottom: 4%;
+  margin: 0 4% 4% 4%;
   width: 92%;
   min-height: 1px; /* browser hack for older IE versions */
   float: left;
+  padding: 0 15px 0 15px;
 }
 
 .colf-1-2,
