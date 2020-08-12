@@ -133,7 +133,41 @@
           <p><a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a></p>
         </article>
       </div>
+      <!-- row 5, 1 2 1 individual boxes -->
+      <div class="rowf">
+        <article class="colf-1-2">
+          <h3>Boston Cream Pie</h3>
+          <img
+            src="statics/images/1-intro-to-floats/boston-cream.jpg"
+            alt="Boston creme pie."
+          >
+          <p>Boston's famous dessert, a combination of yellow cake, vanilla pudding, and chocolate frosting.</p>
+          <p><a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a></p>
+        </article>
+        <article class="colf-2-4">
+          <h3>Coconut Cream Pie</h3>
+          <img
+            src="statics/images/1-intro-to-floats/coconut-cream.jpg"
+            alt="Coconut cream pie."
+          >
+          <p>Coconut cream pie will take you to an island escape. Especially delicious in winter.</p>
+          <p><a href="https://www.favfamilyrecipes.com/coconut-cream-pie-2/">Read more &gt;&gt;</a></p>
+        </article>
+        <article class="colf-1-2">
+          <h3>Key Lime Pie</h3>
+          <img
+            src="statics/images/1-intro-to-floats/keylime-pie.jpg"
+            alt="Key lime pie."
+          >
+          <p>Key lime pie is based on the tiny key limes from Florida. These limes are less sour than conventional limes. </p>
+          <p><a
+              href="https://www.epicurious.com/recipes/food/views/key-lime-pie-108125"
+              target="_blank"
+            >Read more &gt;&gt;</a></p>
+        </article>
+      </div>
     </div>
+
   </q-page>
 </template>
 
@@ -153,6 +187,11 @@ Next, we'll work with the files in the "begin" folder to create a 4-column grid 
 the float grid system written earlier, only written with Flexbox.
 
 We'll also write some code for reversing the rows and reordering boxes within a row.
+
+Extra exercise:
+
+* Add another row that displays a 1 2 1 layout.
+* On tablet, make it so that the 2 flex item is the first one displayed, followed by the two 1 flex items on the next line.
 :::
 `
     }
@@ -192,7 +231,8 @@ div img {
 .colf-1-4 {
   background-color: #ffc;
 }
-.colf-2 {
+.colf-2,
+.colf-2-4 {
   background-color: #ccf;
 }
 .colf-3 {
@@ -213,9 +253,13 @@ div img {
     flex: 0 0 44%;
   }
   .colf-1-4,
+  .colf-2-4,
   .colf-3,
   .colf-4 {
     flex: 0 0 92%;
+  }
+  .colf-2-4 {
+    order: -1;
   }
 }
 /* Desktop screen Sizes */
@@ -228,7 +272,8 @@ div img {
   .colf-1-4 {
     flex: 0 0 20%;
   }
-  .colf-2 {
+  .colf-2,
+  .colf-2-4 {
     flex: 0 0 44%;
   }
   .colf-3 {
@@ -236,6 +281,9 @@ div img {
   }
   .colf-4 {
     flex: 0 0 92%;
+  }
+  .colf-2-4 {
+    order: 0;
   }
 }
 </style>
