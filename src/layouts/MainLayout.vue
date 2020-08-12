@@ -63,6 +63,10 @@ export default {
         {
           title: '2. Flexbox intro',
           link: '/2-flexbox-intro'
+        },
+        {
+          title: '3. Flexbox grid',
+          link: '/3-flexbox-grid'
         }
       ]
     }

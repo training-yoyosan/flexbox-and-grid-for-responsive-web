@@ -11,6 +11,10 @@ const routes = [
       {
         path: '/2-flexbox-intro',
         component: () => import('pages/2-flexbox-intro.vue')
+      },
+      {
+        path: '/3-flexbox-grid',
+        component: () => import('pages/3-flexbox-grid.vue')
       }
     ]
   }
