@@ -28,7 +28,7 @@
 
     <div class="wrapper">
       <!-- row 1, 4 individual boxes -->
-      <div class="rowf">
+      <div class="rowf reverse">
         <article class="colf-1-2">
           <h3>Boston Cream Pie</h3>
           <img
@@ -192,6 +192,7 @@ Extra exercise:
 
 * Add another row that displays a 1 2 1 layout.
 * On tablet, make it so that the 2 flex item is the first one displayed, followed by the two 1 flex items on the next line.
+* Reverse the items in the first row without breaking the layout.
 :::
 `
     }
@@ -284,6 +285,13 @@ div img {
   }
   .colf-2-4 {
     order: 0;
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  .reverse [class*="colf-1"] {
+    margin-left: 0;
+    margin-right: 4%;
   }
 }
 </style>
