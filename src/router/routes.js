@@ -23,6 +23,10 @@ const routes = [
       {
         path: '/5-flexbox-gallery',
         component: () => import('pages/5-flexbox-gallery.vue')
+      },
+      {
+        path: '/6-responsive-images',
+        component: () => import('pages/6-responsive-images.vue')
       }
     ]
   }

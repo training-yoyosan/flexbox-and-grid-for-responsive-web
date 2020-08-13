@@ -75,6 +75,10 @@ export default {
         {
           title: '5. Flexbox gallery',
           link: '/5-flexbox-gallery'
+        },
+        {
+          title: '6. Responsive images',
+          link: '/6-responsive-images'
         }
       ]
     }
