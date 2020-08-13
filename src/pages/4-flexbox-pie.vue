@@ -300,6 +300,12 @@ footer a {
 .colf-1-4 {
   flex: 0 0 96.66666%;
 }
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.5em;
+}
 /* .colf-3 p:first-of-type {
   display: flex;
   flex-flow: row-reverse wrap;
@@ -347,12 +353,6 @@ footer a {
   }
   nav a {
     padding: 0em 1em 0em 1em;
-  }
-  h2 {
-    font-size: 2.5em;
-  }
-  h3 {
-    font-size: 1.5em;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
