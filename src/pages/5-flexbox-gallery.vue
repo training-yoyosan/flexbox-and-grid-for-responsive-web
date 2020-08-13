@@ -239,13 +239,13 @@ figure img {
 
 @media (min-width: 550px) {
   .rowf li {
-    flex: 0 0 40%;
+    flex: 0 0 46%;
   }
 }
 
 @media (min-width: 850px) {
   .rowf li {
-    flex: 0 0 20%;
+    flex: 0 0 21%;
   }
 }
 </style>
