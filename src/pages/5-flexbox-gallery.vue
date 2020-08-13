@@ -224,7 +224,6 @@ ul {
 .rowf {
   display: flex;
   flex-flow: row wrap;
-  /* justify-content: space-around; */
 }
 
 .rowf li {
