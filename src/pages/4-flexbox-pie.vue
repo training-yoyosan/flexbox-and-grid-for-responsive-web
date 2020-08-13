@@ -51,9 +51,11 @@
               alt="Merilee Wilbur, with her favorite rolling pin."
               class="rounded floatright"
             >
-            Sometimes great things come from humble beginnings. For Merilee Wilbur, that beginning came in the form of a request from
-            her 8-year-old son, Jake, who needed a snack to take to his chess club meeting. Merilee flipped through her recipe box and
-            pulled out her grandmother's recipe for Chess Pie. Perfect!
+            <span>
+              Sometimes great things come from humble beginnings. For Merilee Wilbur, that beginning came in the form of a request from
+              her 8-year-old son, Jake, who needed a snack to take to his chess club meeting. Merilee flipped through her recipe box and
+              pulled out her grandmother's recipe for Chess Pie. Perfect!
+            </span>
           </p>
 
           <p>The pie was such a hit with the kids - and their coach - that Merilee started getting requests to bake pies for other
@@ -173,6 +175,10 @@ h6 {
 .wrapper {
   margin: 0 auto;
 }
+.floatright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
 article img {
   border-radius: 10px;
   width: 100%;
@@ -188,17 +194,17 @@ nav ul {
   margin: 12px 0 0 0;
   border-bottom: 3px solid #cc8850;
   overflow: auto;
+  display: flex;
+  flex-flow: row wrap;
 }
 /* splits nav into 2 columns
 http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
 nav li:nth-child(even) {
-  width: 50%;
-  float: right;
+  flex: 0 0 50%;
   padding: 0.5em;
 }
 nav li:nth-child(odd) {
-  width: 50%;
-  float: left;
+  flex: 0 0 50%;
   padding: 0.5em;
 }
 nav a {
@@ -222,14 +228,8 @@ div.rowf {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 1em;
-}
-.floatleft {
-  float: left;
-  margin: 0 1em 1em 0;
-}
-.floatright {
-  float: right;
-  margin: 0 0 1em 1em;
+  display: flex;
+  flex-flow: row wrap;
 }
 [class*="sidebar"] {
   border: 1px solid #00c4c7;
@@ -264,7 +264,7 @@ blockquote {
 }
 blockquote p,
 blockquote cite {
-  padding: 0 1em;
+  padding: 0.5em 1em;
 }
 blockquote cite {
   text-transform: uppercase;
@@ -289,7 +289,7 @@ footer a {
   text-decoration: none;
 }
 
-[class*="‘colf’"] {
+[class*="colf"] {
   margin-left: 0;
 }
 .colf-1,
@@ -298,15 +298,25 @@ footer a {
 .colf-4,
 .colf-1-2,
 .colf-1-4 {
-  width: 96.66666%;
+  flex: 0 0 96.66666%;
+}
+/* .colf-3 p:first-of-type {
+  display: flex;
+  flex-flow: row-reverse wrap;
 }
 
+.colf-3 p:first-of-type img {
+  flex: 0 0 30%;
+}
+.colf-3 p:first-of-type span {
+  flex: 0 0 60%;
+}
+ */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) and (max-width: 849px) {
   .wrapper {
     width: 97%;
     max-width: 767px;
-    float: none;
   }
   .colf-1,
   .colf-2,
@@ -314,27 +324,35 @@ footer a {
   .colf-3,
   .colf-4,
   .colf-1-4 {
-    width: 96.66666%;
+    flex: 0 0 96.66666%;
   }
   div.rowf {
+    display: flex;
+    flex-flow: row wrap;
     padding: 0 2em;
   }
+  .colf-1 {
+    display: flex;
+    flex-flow: row wrap;
+  }
   aside[class*="sidebar"] {
-    float: left;
-    width: 47%;
+    flex: 0 0 47%;
     margin-right: 3%;
   }
-
   nav li,
   nav li:nth-child(even),
   nav li:nth-child(odd) {
-    display: inline-block;
-    float: none;
-    width: auto;
+    flex: 0 0 auto;
     padding: 0;
   }
   nav a {
     padding: 0em 1em 0em 1em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.5em;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -342,27 +360,25 @@ footer a {
   .wrapper {
     width: 97%;
     max-width: 1200px;
-    float: none;
   }
 
   [class*="colf-"] {
-    float: left;
     margin-left: 3.33333%;
     min-height: 1px;
   }
   .colf-1,
   .colf-1-2,
   .colf-1-4 {
-    width: 20.83333%;
+    flex: 0 0 20.83333%;
   }
   .colf-2 {
-    width: 44.99999%;
+    flex: 0 0 44.99999%;
   }
   .colf-3 {
-    width: 69.16665%;
+    flex: 0 0 69.16665%;
   }
   .colf-4 {
-    width: 96.66666%;
+    flex: 0 0 96.66666%;
   }
   h2 {
     font-size: 3em;
@@ -377,9 +393,7 @@ footer a {
   nav li,
   nav li:nth-child(even),
   nav li:nth-child(odd) {
-    display: inline-block;
-    float: none;
-    width: auto;
+    flex: 0 0 auto;
     padding: 0;
   }
   nav a {
