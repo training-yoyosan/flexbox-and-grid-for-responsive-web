@@ -224,14 +224,17 @@ ul {
 .rowf {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 .rowf li {
-  margin: 0 2%;
-  flex: 0 0 96%;
+  margin: 1% 1%;
+  flex: 0 0 98%;
 }
 
+figure {
+  margin: 0;
+}
 figure img {
   display: block;
   width: 100%;
@@ -239,13 +242,13 @@ figure img {
 
 @media (min-width: 550px) {
   .rowf li {
-    flex: 0 0 46%;
+    flex: 0 0 48%;
   }
 }
 
 @media (min-width: 850px) {
   .rowf li {
-    flex: 0 0 21%;
+    flex: 0 0 23%;
   }
 }
 </style>
