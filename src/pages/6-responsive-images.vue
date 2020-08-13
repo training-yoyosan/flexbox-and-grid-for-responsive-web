@@ -47,6 +47,8 @@
   </q-page>
 </template>
 
+<script src="statics/js/picturefill.min.js" />
+
 <script>
 export default {
   name: 'ResponsiveImages',
@@ -70,4 +72,22 @@ http://timkadlec.com/2012/04/media-query-asset-downloading-results/
 </script>
 
 <style lang="css">
+@media (min-width: 1px) {
+  .bkgdimg {
+    background: url(/statics/images/6-responsive-images/mom-300.jpg) no-repeat;
+    height: 50px;
+  }
+}
+@media (min-width: 500px) {
+  .bkgdimg {
+    background: url(/statics/images/6-responsive-images/mom-767.jpg) no-repeat;
+    height: 128px;
+  }
+}
+@media (min-width: 1000px) {
+  .bkgdimg {
+    background: url(/statics/images/6-responsive-images/mom-1200.jpg) no-repeat;
+    height: 200px;
+  }
+}
 </style>
