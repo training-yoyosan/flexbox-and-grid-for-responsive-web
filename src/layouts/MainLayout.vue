@@ -67,6 +67,10 @@ export default {
         {
           title: '3. Flexbox grid',
           link: '/3-flexbox-grid'
+        },
+        {
+          title: '4. Flexbox pie',
+          link: '/4-flexbox-pie'
         }
       ]
     }

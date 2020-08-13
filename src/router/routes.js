@@ -15,6 +15,10 @@ const routes = [
       {
         path: '/3-flexbox-grid',
         component: () => import('pages/3-flexbox-grid.vue')
+      },
+      {
+        path: '/4-flexbox-pie',
+        component: () => import('pages/4-flexbox-pie.vue')
       }
     ]
   }
