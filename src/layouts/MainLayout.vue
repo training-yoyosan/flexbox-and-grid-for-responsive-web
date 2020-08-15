@@ -79,6 +79,10 @@ export default {
         {
           title: '6. Responsive images',
           link: '/6-responsive-images'
+        },
+        {
+          title: '9. Mondrian painting demo',
+          link: '/9-mondrian-painting-demo'
         }
       ]
     }

@@ -27,6 +27,10 @@ const routes = [
       {
         path: '/6-responsive-images',
         component: () => import('pages/6-responsive-images.vue')
+      },
+      {
+        path: '/9-mondrian-painting-demo',
+        component: () => import('pages/9-mondrian-painting-demo.vue')
       }
     ]
   }
