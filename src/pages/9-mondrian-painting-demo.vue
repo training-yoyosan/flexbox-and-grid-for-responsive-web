@@ -26,7 +26,7 @@
 
     </q-list>
 
-    <div class="mon wrapper">
+    <div class="wrapper">
       <div class="mon a">a</div>
       <div class="mon b">b</div>
       <div class="mon c">c</div>
@@ -63,45 +63,52 @@ Write a media query so that when the screen is small, you flip the painting upsi
 </script>
 
 <style lang="css">
-.wrapper {
+div.wrapper {
   width: 600px;
   height: 600px;
-  background: url(/statics/images/9-mondrian-painting-demo/painting.png)
-    no-repeat;
+  /* background: url(/statics/images/9-mondrian-painting-demo/painting.png)
+    no-repeat; */
   display: grid;
-  gap: 1em 1em;
+  gap: 33px 16px;
+  grid-template-rows: 180px 220px 50px 50px;
+  grid-template-columns: 128px 398px 40px;
+  background-color: black;
 }
 div.mon {
   border: 1px solid black;
   background-color: white;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
-.a {
+div.a {
   grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-row: 1 / 2;
 }
-.b {
+div.b {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+div.c {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  background-color: red;
+}
+div.d {
   grid-column: 1 / 2;
   grid-row: 3 / 5;
+  background-color: blue;
+  color: white;
 }
-.c {
-  grid-column: 2 / 5;
-  grid-row: 1 / 5;
+div.e {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
 }
-.d {
-  grid-column: 1 / 2;
-  grid-row: 5 / 7;
+div.f {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
 }
-.e {
-  grid-column: 2 / 4;
-  grid-row: 5 / 7;
-}
-.f {
-  grid-column: 4 / 5;
-  grid-row: 5 / 6;
-}
-.g {
-  grid-column: 4 / 5;
-  grid-row: 6 / 7;
+div.g {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  background-color: yellow;
 }
 </style>
