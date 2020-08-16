@@ -87,6 +87,10 @@ export default {
         {
           title: '10. Mondrian you try it',
           link: '/10-mondrian-you-try-it'
+        },
+        {
+          title: '11. Grid grid',
+          link: '/11-grid-grid'
         }
       ]
     }

@@ -35,6 +35,10 @@ const routes = [
       {
         path: '/10-mondrian-you-try-it',
         component: () => import('pages/10-mondrian-you-try-it.vue')
+      },
+      {
+        path: '/11-grid-grid',
+        component: () => import('pages/11-grid-grid.vue')
       }
     ]
   }
