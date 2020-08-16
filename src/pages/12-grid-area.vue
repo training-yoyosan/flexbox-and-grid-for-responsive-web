@@ -71,6 +71,12 @@ In this exercise, we'll learn the grid-area syntax. We have been creating grids 
   display: grid;
   grid-gap: 10px;
   font-family: Arial, sans-serif;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "article"
+    "sidebar";
 }
 .wrapper > * {
   padding: 1em;
@@ -79,40 +85,31 @@ In this exercise, we'll learn the grid-area syntax. We have been creating grids 
 header {
   background-color: blue;
   color: white;
+  grid-area: header;
 }
 article {
   background-color: green;
   color: white;
+  grid-area: article;
 }
 aside {
   background-color: yellow;
+  grid-area: sidebar;
 }
 @media (min-width: 650px) {
-  header {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  article {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  aside {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
+  .wrapper {
+    grid-template-areas:
+      "article article sidebar"
+      "article article sidebar"
+      "header header sidebar";
   }
 }
 @media (min-width: 1000px) {
-  header {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-  article {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  }
-  aside {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+  .wrapper {
+    grid-template-areas:
+      "sidebar header header"
+      "sidebar article article"
+      "sidebar article article";
   }
 }
 </style>
