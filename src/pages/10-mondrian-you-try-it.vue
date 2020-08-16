@@ -69,11 +69,16 @@ Now that you've built one Mondrian work of art, try for a second on your own. Th
 </script>
 
 <style lang="css">
+/* 7 rows, 5 columns */
 .wrapper {
   width: 633px;
   height: 458px;
   background: url(/statics/images/10-mondrian-you-try-it/mondrian2.png)
     no-repeat;
+  display: grid;
+  gap: 7px 8px;
+  grid-template-rows: 70px 14px 58px 53px 81px;
+  grid-template-columns: 302px 87px 151px 69px;
 }
 div.mon {
   border: 1px solid black;
@@ -81,23 +86,43 @@ div.mon {
   opacity: 0.5;
 }
 div.a {
+  grid-row: 1/6;
+  grid-column: 1/2;
 }
 div.b {
+  grid-row: 1/3;
+  grid-column: 2/3;
 }
 div.c {
+  grid-row: 1/4;
+  grid-column: 3/4;
 }
 div.d {
+  grid-row: 1/2;
+  grid-column: 4/5;
 }
 div.e {
+  grid-row: 3/6;
+  grid-column: 2/3;
 }
 div.f {
+  grid-row: 4/5;
+  grid-column: 3/4;
 }
 div.g {
+  grid-row: 2/5;
+  grid-column: 4/5;
 }
 div.h {
+  grid-row: 6/7;
+  grid-column: 1/2;
 }
 div.i {
+  grid-row: 6/7;
+  grid-column: 2/3;
 }
 div.j {
+  grid-row: 5/7;
+  grid-column: 3/5;
 }
 </style>
