@@ -91,6 +91,10 @@ export default {
         {
           title: '11. Grid grid',
           link: '/11-grid-grid'
+        },
+        {
+          title: '12. Grid area',
+          link: '/12-grid-area'
         }
       ]
     }
