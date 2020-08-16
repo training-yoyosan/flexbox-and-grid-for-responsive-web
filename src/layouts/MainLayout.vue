@@ -83,6 +83,10 @@ export default {
         {
           title: '9. Mondrian painting demo',
           link: '/9-mondrian-painting-demo'
+        },
+        {
+          title: '10. Mondrian you try it',
+          link: '/10-mondrian-you-try-it'
         }
       ]
     }

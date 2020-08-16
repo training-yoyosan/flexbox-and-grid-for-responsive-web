@@ -31,6 +31,10 @@ const routes = [
       {
         path: '/9-mondrian-painting-demo',
         component: () => import('pages/9-mondrian-painting-demo.vue')
+      },
+      {
+        path: '/10-mondrian-you-try-it',
+        component: () => import('pages/10-mondrian-you-try-it.vue')
       }
     ]
   }
