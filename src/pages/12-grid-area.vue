@@ -98,18 +98,20 @@ aside {
 }
 @media (min-width: 650px) {
   .wrapper {
+    grid-template-columns: 3fr 1fr;
     grid-template-areas:
-      "article article sidebar"
-      "article article sidebar"
-      "header header sidebar";
+      "article sidebar"
+      "article sidebar"
+      "header sidebar";
   }
 }
 @media (min-width: 1000px) {
   .wrapper {
+    grid-template-columns: 1fr 3fr;
     grid-template-areas:
-      "sidebar header header"
-      "sidebar article article"
-      "sidebar article article";
+      "sidebar header"
+      "sidebar article"
+      "sidebar article";
   }
 }
 </style>
