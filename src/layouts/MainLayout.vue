@@ -95,6 +95,10 @@ export default {
         {
           title: '12. Grid area',
           link: '/12-grid-area'
+        },
+        {
+          title: '13. Grid nesting',
+          link: '/13-grid-nesting'
         }
       ]
     }

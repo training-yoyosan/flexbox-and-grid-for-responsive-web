@@ -43,6 +43,10 @@ const routes = [
       {
         path: '/12-grid-area',
         component: () => import('pages/12-grid-area.vue')
+      },
+      {
+        path: '/13-grid-nesting',
+        component: () => import('pages/13-grid-nesting.vue')
       }
     ]
   }
