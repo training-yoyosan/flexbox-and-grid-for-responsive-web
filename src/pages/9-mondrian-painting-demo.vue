@@ -16,7 +16,7 @@
       <q-expansion-item
         expand-separator
         v-model="expanded"
-        label="6. Responsive images"
+        label="9. Mondrian demo"
         caption="Instructions"
       >
         <q-markdown :src="instructions">
