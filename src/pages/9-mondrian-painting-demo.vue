@@ -6,7 +6,7 @@
         icon="fab fa-github"
         label="Source code"
         type="a"
-        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/6-responsive-images.vue"
+        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/9-mondrian-demo.vue"
         target="_blank"
         no-caps
       />
