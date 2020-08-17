@@ -99,6 +99,10 @@ export default {
         {
           title: '13. Grid nesting',
           link: '/13-grid-nesting'
+        },
+        {
+          title: '14. Grid offsets',
+          link: '/14-grid-offsets'
         }
       ]
     }
