@@ -1,30 +1,11 @@
 <template>
   <q-page padding>
-    <div class="row justify-end">
-      <q-btn
-        color="primary"
-        icon="fab fa-github"
-        label="Source code"
-        type="a"
-        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/11-grid-grid.vue"
-        target="_blank"
-        no-caps
-      />
-    </div>
-
-    <q-list class="rounded-borders q-my-md">
-      <q-expansion-item
-        expand-separator
-        v-model="expanded"
-        label="11. Grid grid"
-        caption="Instructions"
-      >
-        <q-markdown :src="instructions">
-
-        </q-markdown>
-      </q-expansion-item>
-
-    </q-list>
+    <exercise-header
+      label="11. Grid grid"
+      :expanded="expanded"
+      :instructions="instructions"
+      filename="11-grid-grid"
+    />
 
     <div class="wrapper">
       <!-- row 1, 4 individual boxes -->
@@ -162,6 +143,10 @@
 <script>
 export default {
   name: 'GridGrid',
+
+  components: {
+    'exercise-header': require('components/ExerciseHeader').default
+  },
 
   data () {
     return {

@@ -1,30 +1,11 @@
 <template>
   <q-page padding>
-    <div class="row justify-end">
-      <q-btn
-        color="primary"
-        icon="fab fa-github"
-        label="Source code"
-        type="a"
-        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/12-grid-area.vue"
-        target="_blank"
-        no-caps
-      />
-    </div>
-
-    <q-list class="rounded-borders q-my-md">
-      <q-expansion-item
-        expand-separator
-        v-model="expanded"
-        label="12. Grid area"
-        caption="Instructions"
-      >
-        <q-markdown :src="instructions">
-
-        </q-markdown>
-      </q-expansion-item>
-
-    </q-list>
+    <exercise-header
+      label="12. Grid area"
+      :expanded="expanded"
+      :instructions="instructions"
+      filename="12-grid-area"
+    />
 
     <div class="wrapper">
       <header>
@@ -50,6 +31,10 @@
 <script>
 export default {
   name: 'GridArea',
+
+  components: {
+    'exercise-header': require('components/ExerciseHeader').default
+  },
 
   data () {
     return {

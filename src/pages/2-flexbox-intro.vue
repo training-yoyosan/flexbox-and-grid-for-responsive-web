@@ -1,30 +1,11 @@
 <template>
   <q-page padding>
-    <div class="row justify-end">
-      <q-btn
-        color="primary"
-        icon="fab fa-github"
-        label="Source code"
-        type="a"
-        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/2-flexbox-intro.vue"
-        target="_blank"
-        no-caps
-      />
-    </div>
-
-    <q-list class="rounded-borders q-my-md">
-      <q-expansion-item
-        expand-separator
-        v-model="expanded"
-        label="2 Flexbox intro"
-        caption="Instructions"
-      >
-        <q-markdown :src="instructions">
-
-        </q-markdown>
-      </q-expansion-item>
-
-    </q-list>
+    <exercise-header
+      label="2. Flexbox intro"
+      :expanded="expanded"
+      :instructions="instructions"
+      filename="2-flexbox-intro"
+    />
 
     <div>
       <ul class="ex">
@@ -42,6 +23,10 @@
 <script>
 export default {
   name: 'FlexboxIntro',
+
+  components: {
+    'exercise-header': require('components/ExerciseHeader').default
+  },
 
   data () {
     return {

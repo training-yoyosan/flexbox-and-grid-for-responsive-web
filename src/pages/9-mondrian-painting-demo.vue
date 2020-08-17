@@ -1,30 +1,11 @@
 <template>
   <q-page padding>
-    <div class="row justify-end">
-      <q-btn
-        color="primary"
-        icon="fab fa-github"
-        label="Source code"
-        type="a"
-        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/9-mondrian-demo.vue"
-        target="_blank"
-        no-caps
-      />
-    </div>
-
-    <q-list class="rounded-borders q-my-md">
-      <q-expansion-item
-        expand-separator
-        v-model="expanded"
-        label="9. Mondrian demo"
-        caption="Instructions"
-      >
-        <q-markdown :src="instructions">
-
-        </q-markdown>
-      </q-expansion-item>
-
-    </q-list>
+    <exercise-header
+      label="9. Mondrian demo"
+      :expanded="expanded"
+      :instructions="instructions"
+      filename="9-mondrian-painting-demo"
+    />
 
     <div class="wrapper">
       <div class="mon a">a</div>
@@ -42,6 +23,10 @@
 <script>
 export default {
   name: 'MondrianPaintingDemo',
+
+  components: {
+    'exercise-header': require('components/ExerciseHeader').default
+  },
 
   data () {
     return {

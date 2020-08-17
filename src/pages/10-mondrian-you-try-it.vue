@@ -1,30 +1,11 @@
 <template>
   <q-page padding>
-    <div class="row justify-end">
-      <q-btn
-        color="primary"
-        icon="fab fa-github"
-        label="Source code"
-        type="a"
-        href="https://github.com/training-yoyosan/flexbox-and-grid-for-responsive-web/blob/master/src/pages/10-mondrian-you-try-it.vue"
-        target="_blank"
-        no-caps
-      />
-    </div>
-
-    <q-list class="rounded-borders q-my-md">
-      <q-expansion-item
-        expand-separator
-        v-model="expanded"
-        label="10. Mondrian you try it"
-        caption="Instructions"
-      >
-        <q-markdown :src="instructions">
-
-        </q-markdown>
-      </q-expansion-item>
-
-    </q-list>
+    <exercise-header
+      label="10. Mondrian you try it"
+      :expanded="expanded"
+      :instructions="instructions"
+      filename="10-mondrian-you-try-it"
+    />
 
     <div class="wrapper">
       <div class="mon a">a</div>
@@ -44,6 +25,10 @@
 <script>
 export default {
   name: 'MondrianYouTryIt',
+
+  components: {
+    'exercise-header': require('components/ExerciseHeader').default
+  },
 
   data () {
     return {
