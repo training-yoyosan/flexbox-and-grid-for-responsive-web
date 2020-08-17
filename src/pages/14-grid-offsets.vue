@@ -17,11 +17,11 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci laborum, ex tempora esse fuga consequuntur dolores excepturi, eaque quis incidunt?</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci laborum, ex tempora esse fuga consequuntur dolores excepturi, eaque quis incidunt?</p>
         <div class="nested">
-          <aside>
+          <aside class="article1">
             <h3>Aside #1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id hic iure saepe natus, suscipit repudiandae in aliquid quod tenetur dolore!</p>
           </aside>
-          <aside>
+          <aside class="art3">
             <h3>Aside #3</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id hic iure saepe natus, suscipit repudiandae in aliquid quod tenetur dolore!</p>
           </aside>
@@ -85,6 +85,19 @@ article aside {
   padding: 0.5em;
   border-radius: 0.5em;
 }
+.nested {
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    "art1"
+    "art3";
+}
+.art1 {
+  grid-area: art1;
+}
+.art3 {
+  grid-area: art3;
+}
 
 @media (min-width: 650px) {
   header {
@@ -98,6 +111,10 @@ article aside {
   .sidebar {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
+  }
+  .nested {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "art1 . art3";
   }
 }
 @media (min-width: 1000px) {
